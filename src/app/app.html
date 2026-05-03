@@ -1,0 +1,69 @@
+<video
+  #srcVideo
+  src="https://videotourl.com/videos/1777798007507-f9cfd134-45c4-478f-9600-93bfb47fef65.mp4"
+  muted
+  playsinline
+  preload="auto"
+  class="absolute w-[1px] h-[1px] opacity-0 pointer-events-none -top-[9999px]">
+</video>
+
+<!-- ── SCRUB SECTION ── -->
+<section id="scrub-section" #scrubSection>
+  <div id="canvas-wrap" [class.zoomed-in]="revealed()">
+    <canvas id="video-canvas" #videoCanvas></canvas>
+
+    <div id="scroll-hint" [style.opacity]="hintOpacity()">
+      <span>Scroll to reveal</span>
+      <div class="arrow"></div>
+    </div>
+
+    <div id="frame-counter" [style.opacity]="counterOpacity()">— {{ formattedTime() }} —</div>
+    <div id="progress-bar" [style.width.%]="progress() * 100"></div>
+  </div>
+</section>
+
+<!-- ── HERO SECTION ── -->
+<div id="hero" [class.revealed]="revealed()">
+  <nav>
+    <a href="javascript:void(0)" class="nav-logo">Hori<span>zon</span></a>
+    <ul class="nav-links">
+      <li><a href="javascript:void(0)">Work</a></li>
+      <li><a href="javascript:void(0)">About</a></li>
+      <li><a href="javascript:void(0)">Stories</a></li>
+      <li><a href="javascript:void(0)">Contact</a></li>
+    </ul>
+    <a href="javascript:void(0)" class="nav-cta">Get Started</a>
+  </nav>
+
+  <div class="hero-body">
+    <p class="hero-eyebrow">A New Chapter Begins</p>
+    <h1 class="hero-title">
+      <em>Beyond the</em>
+      Horizon
+    </h1>
+    <p class="hero-sub">
+      Every frame holds a story.<br>
+      Every second, an invitation to venture further.
+    </p>
+    <div class="hero-cta">
+      <a href="javascript:void(0)" class="btn-primary">Discover More</a>
+      <a href="javascript:void(0)" class="btn-secondary">Watch Full Story</a>
+    </div>
+    <div class="hero-marks">
+      <div class="mark">
+        <span class="mark-num">240+</span>
+        <span class="mark-label">Projects</span>
+      </div>
+      <div class="mark-sep"></div>
+      <div class="mark">
+        <span class="mark-num">18</span>
+        <span class="mark-label">Countries</span>
+      </div>
+      <div class="mark-sep"></div>
+      <div class="mark">
+        <span class="mark-num">12yr</span>
+        <span class="mark-label">Experience</span>
+      </div>
+    </div>
+  </div>
+</div>
